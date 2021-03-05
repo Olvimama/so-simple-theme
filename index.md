@@ -5,4 +5,4 @@ show_excerpts: true
 entries_layout: list
 ---
 
-This is for test.
+3월 중 첫 게시글로 찾아오겠습니다!
