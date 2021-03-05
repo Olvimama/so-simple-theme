@@ -17,8 +17,8 @@ theme: jekyll-theme-so-simple
 # remote_theme: mmistakes/so-simple-theme
 skin: "/assets/css/skins/light.css"
 locale: ko-KR
-title: "TW who CANT write WELL"
-description: "Continuous Writing XD"
+title: "who lives with 2 cats"
+description: "I write once in a while XD"
 baseurl: # the subpath of your site, e.g. "/blog"
 url: "https://olvimama.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: /images/logo.png # path of site logo, e.g. "/images/logo.png"
@@ -38,7 +38,7 @@ google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 disqus:
   shortname: # Disqus shortname, e.g. "my_disqus_shortname"
 twitter:
-  username: # site's Twitter username, e.g. "mmistakes"
+  username: olvi_ut # site's Twitter username, e.g. "mmistakes"
 
 # Liquid
 liquid:
@@ -91,20 +91,32 @@ defaults:
 
 # Site Author
 author:
-  name: "Olvi Kim"
+  name: Olvi Kim
   picture: /images/me.png
-  email: "dj.olvimama@gmail.com"
-  twitter: "@olvi_ut"
+  email:
+  twitter: olvi_ut
   links:
-    - title: Instagram
-      url: https://instagram.com/songsongdalsong
-      icon: fab fa-instagram
+    - title: Twitter
+      url: https://twitter.com/olvi_ut
+      icon: fab fa-twitter-square
     - title: GitHub
       url: https://github.com/olvimama
       icon: fab fa-github-square
+    - title: Linkedin
+      url: https://www.linkedin.com/in/olvi-kim
+      icon: fab fa-linkedin-square
 
 # Footer Links
 footer_links:
+  - title: Twitter
+    url: https://twitter.com/olvi_ut
+    icon: fab fa-twitter-square
+  - title: GitHub
+    url: https://github.com/olvimama
+    icon: fab fa-github-square
+  - title: Linkedin
+    url: https://www.linkedin.com/in/olvi-kim
+    icon: fab fa-linkedin
   - title: Feed
     url: atom.xml
     icon: fas fa-rss-square
