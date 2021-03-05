@@ -21,7 +21,7 @@ title: "TW who CANT write WELL"
 description: "Continuous Writing XD"
 baseurl: # the subpath of your site, e.g. "/blog"
 url: "https://olvimama.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: /image/logo.png # path of site logo, e.g. "/images/logo.png"
+logo: /images/logo.png # path of site logo, e.g. "/images/logo.png"
 date_format: "%Y-%m-%d" # default: "%B %-d, %Y"
 read_time: true # reading time estimates, e.g. true
 words_per_minute: 200 # 200
@@ -92,9 +92,9 @@ defaults:
 # Site Author
 author:
   name: "Olvi Kim"
-  picture:
+  picture: /images/me.png
   email: "dj.olvimama@gmail.com"
-  twitter:
+  twitter: "@olvi_ut"
   links:
     - title: Instagram
       url: https://instagram.com/songsongdalsong
