@@ -1,5 +1,5 @@
 ---
-title: "OKKYCON 2021 &gt;협업의 기술&lt; 후기"
+title: "OKKYCON 2021 &lt;협업의 기술&gt; 후기"
 excerpt_separator: "<!--more-->"
 categories:
   - Experience
