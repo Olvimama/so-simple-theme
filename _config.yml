@@ -38,7 +38,7 @@ google_analytics: # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 disqus:
   shortname: # Disqus shortname, e.g. "my_disqus_shortname"
 twitter:
-  username: olvi_ut # site's Twitter username, e.g. "mmistakes"
+  username: # site's Twitter username, e.g. "mmistakes"
 
 # Liquid
 liquid:
@@ -96,9 +96,6 @@ author:
   email:
   twitter: olvi_ut
   links:
-    - title: Twitter
-      url: https://twitter.com/olvi_ut
-      icon: fab fa-twitter-square
     - title: GitHub
       url: https://github.com/olvimama
       icon: fab fa-github-square
@@ -108,9 +105,6 @@ author:
 
 # Footer Links
 footer_links:
-  - title: Twitter
-    url: https://twitter.com/olvi_ut
-    icon: fab fa-twitter-square
   - title: GitHub
     url: https://github.com/olvimama
     icon: fab fa-github-square
