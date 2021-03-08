@@ -1,7 +1,7 @@
 ---
 title: Category
 layout: categories
-permalink: /categories/
+permalink: /category/
 show_excerpts: true
 entries_layout: list
 ---

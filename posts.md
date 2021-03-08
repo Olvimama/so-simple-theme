@@ -1,7 +1,7 @@
 ---
 title: Post
 layout: posts
-permalink: /posts/
+permalink: /post/
 show_excerpts: true
 entries_layout: list
 ---
