@@ -62,8 +62,8 @@ paginate_path: /page:num/
 search_full_content: true # can have performance implications for large sites
 
 # Taxonomy pages
-category_archive_path: "/categories/#"
-tag_archive_path: "/tags/#"
+category_archive_path: "/category/#"
+tag_archive_path: "/tag/#"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -98,7 +98,7 @@ author:
   name: Olvi Kim
   picture: /images/me.png
   email:
-  twitter: olvi_ut
+  twitter:
   links:
     - title: GitHub
       url: https://github.com/olvimama
