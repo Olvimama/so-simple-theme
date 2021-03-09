@@ -1,6 +1,6 @@
 ---
 title: "git blog를 시작하며"
-excerpt_separator: "<!--more-->"
+date: 9999-12-31
 categories:
   - Hello
 tags:
