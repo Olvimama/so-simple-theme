@@ -7,7 +7,7 @@ tags:
   - conference
   - review
   - OKKYCON
-last_modifed_at: 2021-03-08T21:01+09:00
+last_modified_at: 2021-03-08T21:01+09:00
 ---
 
 > OKKYCON 2021은 회사 지원으로 참가했으며, 본 글은 사내 게시판에 공유한 글을 블로그에 옮긴 것입니다.
