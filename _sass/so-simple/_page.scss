@@ -78,7 +78,7 @@
 
   .read-time {
     @include breakpoint($large) {
-      padding: 0.25em;
+      padding: 0.5em;
       //display: block;
     }
   }
