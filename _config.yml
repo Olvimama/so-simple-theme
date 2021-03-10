@@ -16,21 +16,21 @@
 theme: jekyll-theme-so-simple
 # remote_theme: mmistakes/so-simple-theme
 skin: "/assets/css/skins/default.css"
-locale: ko-KR
-title: "read ANYthing, write MESSily"
-description: "I write once in a blue moon XD"
+locale: ko-KR # customized by olvi
+title: "read ANYthing, write MESSily" # customized by olvi
+description: "I write once in a blue moon XD" # customized by olvi
 baseurl: # the subpath of your site, e.g. "/blog"
-url: "https://olvimama.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url: "https://olvimama.github.io" # the base hostname & protocol for your site # customized by olvi
 logo: /images/logo.png # path of site logo, e.g. "/images/logo.png"
-date_format: "%Y-%m-%d" # default: "%B %-d, %Y"
+date_format: "%Y-%m-%d" # default: "%B %-d, %Y" # customized by olvi
 read_time: true # reading time estimates, e.g. true
-words_per_minute: 200 # 200
+words_per_minute: 175 # customized by olvi (default:200)
 mathjax:
   enable: # MathJax equations, e.g. true, false (default)
   combo:  # "tex-svg" (default), "tex-mml-chtml", etc.: docs.mathjax.org/en/latest/web/components/combined.html
   tags:  # "none", "ams" (default), "all"
 google_fonts:
-  - name: "Do Hyeon"
+  - name: "Do Hyeon"  # added by olvi
     weights: "400,400i,700,700i"
   - name: "Source Sans Pro"
     weights: "400,400i,700,700i"
@@ -47,7 +47,7 @@ liquid:
   error_mode: strict
 
 # Build settings
-permalink: /blog/:title # /:categories/:title/
+permalink: /blog/:title # customized by olvi
 markdown: kramdown
 feed:
   path: atom.xml
