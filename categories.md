@@ -1,5 +1,5 @@
 ---
-title: Category
+title: Category Archive
 layout: categories
 permalink: /category/
 show_excerpts: true
