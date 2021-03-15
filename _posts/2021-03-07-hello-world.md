@@ -1,6 +1,6 @@
 ---
 title: "GitHub Pages(a.k.a. git blog)를 시작하며"
-excerpt: "블로그를 다시 하게 된 이유와 앞으로 쓰고 싶은 것에 대한 이야기"
+excerpt: "> 블로그를 다시 하게 된 이유와 앞으로 쓰고 싶은 것에 대한 이야기"
 categories:
   - Hello
 tags:
