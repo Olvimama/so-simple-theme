@@ -46,6 +46,10 @@ twitter:
 liquid:
   error_mode: strict
 
+# Kramdown (ref. https://mmistakes.github.io/so-simple-theme/markup-syntax-highlighting/)
+kramdown:
+  input: GFM
+
 # Build settings
 permalink: /blog/:title # customized by olvi
 markdown: kramdown
