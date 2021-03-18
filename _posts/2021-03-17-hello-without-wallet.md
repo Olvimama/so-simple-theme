@@ -5,6 +5,8 @@ categories:
   - Hello
 tags:
   - essay
+  - fintech
+  - UX
 ---
 
 _블로그에 일기는 가급적 안쓰려고 했는데, 그냥 넘어가기엔 오늘의 경험이 시사하는 바가 많아서 남겨본다._

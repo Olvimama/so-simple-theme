@@ -6,6 +6,7 @@ categories:
 tags:
   - essay
   - GitHub Pages
+  - blog
 last_modified_at: 2021-03-09 17:13:00 +0900
 ---
 
