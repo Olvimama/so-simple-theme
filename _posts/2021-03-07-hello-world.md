@@ -4,7 +4,7 @@ excerpt: "> 블로그를 다시 하게 된 이유와 앞으로 쓰고 싶은 것
 categories:
   - Hello
 tags:
-  - blog
+  - essay
   - GitHub Pages
 last_modified_at: 2021-03-09 17:13:00 +0900
 ---
