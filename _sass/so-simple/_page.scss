@@ -175,8 +175,14 @@
   text-decoration: none;
 }
 
+// [olvi-2021-03-22] apply margin 1em between .page-previous and .page-next
+.page-previous {
+  margin-right: 0.5em;
+}
+
 .page-next {
   margin-top: 1em;
+  margin-left: 0.5em; // [olvi-2021-03-22] apply margin 1em between .page-previous and .page-next
 
   @include breakpoint($large) {
     margin-top: 0;
@@ -194,7 +200,7 @@
   margin: 0;
   padding: 0;
   font-family: $meta-font-family;
-  font-size: 0.9rem;
+  font-size: 0.75rem; // default: 0.9rem [olvi-2021-03-22] apply margin 1em between .page-previous and .page-next
   font-style: italic;
 }
 
