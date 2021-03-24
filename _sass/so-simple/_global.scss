@@ -369,3 +369,19 @@
   color: #bbbbbb;
   text-align: center;
 }
+
+// [olvi-2021-03-24] 404 error page
+.err404-title {
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 700;
+  font-family: $base-font-family;
+}
+
+.err404 {
+  margin-bottom: 5em;
+  text-align: center;
+  color: #555555;
+}
