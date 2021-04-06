@@ -1,0 +1,173 @@
+---
+title: "[GitHub Pages] 첫 걸음 내딛기"
+excerpt: "> GitHub Pages를 선택한 이유, 지킬(Jekyll) 설치하기, 테마 선택, 로컬에서 테스트하는 방법까지"
+categories:
+- Experience
+tags:
+  - GitHub Pages
+  - blog
+  - troubleshooting
+---
+
+GitHub Pages로 이 공간을 만들면서 많은 검색을 했다. 장단점이 무엇이냐부터 시작해서 세팅 과정, GA 적용 방법, 테마 수정하고 싶은데 CSS에서 막히는 부분이 있을 때 등등 별의 별 검색을 다 해보았다. 그러다보니 나도 기여를 해야겠다는 엉뚱한 생각이 들었다. 혹시 아는가? 누군가 GitHub Pages로 블로그 만들다가 막혀서 검색을 했는데 내 글이 도움이 될지. 그래서 나의 GitHub Pages 삽질기를 써보기로 결심했다. 이는 그 첫 번째 글이다.
+
+본 글은 삽질기, 즉 트러블슈팅을 위주로 다루고자 합니다. 검색하면 나오는 내용에 대해서는 링크로 대체하겠습니다.
+{: .notice--warning}
+
+{% include toc %}
+
+# 왜 GitHub Pages 인가?
+
+그 이유에 대해서는 이미 이 블로그의 [`첫 글`]({% link _posts/2021-03-07-hello-world.md %})에 언급한 바 있다. 하지만 해당 글에는 다른 이야기도 섞여있고, 그 글에서 다루지 못한 내용도 있어 다시 정리해보면 다음과 같다:
+
+- 댓글 기능을 별도로 추가해야 한다.
+- (댓글, SNS 공유 등 독자 반응에 대한) 푸시가 오지 않는다.
+- markdown, html 등으로 써야 한다.
+- git 커밋 작업이 필요하다.
+- 자체적으로 통계 기능을 제공하지 않아 별도로 구축해야 한다.
+- 검색 노출을 원하면 각 엔진마다 세팅해줘야 한다.
+
+위 특징은 주로 GitHub Pages 단점을 검색할 때 나오는 말이다. 그러나 나는 저런 허들(?)이 맘에 들어서 선택하게 됐다. 즉 나에게 저 특징들은 GitHub Pages가 갖고 있는 장점이었던 것이다. 결론적으로:
+
+내가 손수 이런 저런 경험을 해보고 싶다면 GitHub Pages 만한 것이 없다.
+{: .notice--accent}
+
+# GitHub Pages 시작하기
+
+글 서두에 밝혔듯 검색하면 나오는 내용은 링크로 대체하고자 한다.  
+
+<a href="https://thdev.net/644" target="_blank">Github 페이지를 이용하여 개인 페이지 구성하기</a>
+
+사실 위 링크에 나오는 글 내용만 따라해도 그럴듯한 GitHub Pages가 완성이 되며, `난 더이상 굳이 진행할 필요 없어!` 라고 생각하면 굳이 이 아래 내용을 보지 않아도 좋다.
+
+# 지킬(Jekyll) 설치하기
+
+사실 markdown을 이용해서 블로그 글을 작성하려면 지킬(Jekyll)이라는 것을 PC에 설치해야 한다. 지킬은 markdown을 웹 페이지로 생성해주는 역할을 한다고 생각하면 된다.
+
+`아니 깃헙에서 이미 멀쩡히 잘 돌아가고 있는데 이걸 왜 내 PC에 설치해야 해?` 라고 생각할 수 있고 나도 처음에는 그렇게 생각했다. 그럼 지킬을 설치해야 하는 이유는 무엇인가? 몇 가지 있지만 내가 생각하는 가장 큰 이유는 이것이다.
+
+> 로컬 PC에서 작성한 글에 오류가 있을 수 있다. 로컬에서 미리 확인하려면 내 PC에서 지킬이 돌아가야 한다.
+
+지킬의 매뉴얼이 포함된 공식 사이트는 <a href="https://jekyllrb.com/" target="_blank">https://jekyllrb.com/</a> 이다. 영어 사이트다. 영어 울렁증이 있다면? 걱정마라. 한국어 사이트도 있다.
+
+<a href="https://jekyllrb-ko.github.io/" target="_blank">https://jekyllrb-ko.github.io/</a>
+
+지킬 v4.0.0을 기준으로 번역된 내용이고, 일부 페이지는 원본(영문)으로 나오지만 전반적으로 이해하는데 큰 무리는 없다.
+
+한국어 지킬 사이트에 들어가면 아래와 같은 내용이 눈에 띈다.
+
+![image-center]({{ '/images/experience/2021-04-06-jekyll-quick-start.png' | relative_url }}){: .align-center}
+
+사실 저게 전부다. 저 내용대로 아무 에러 없이 모든 게 잘 흘러가면 끝이다. 하지만 내 경우 약간의 문제를 겪었고 그 해결책을 공유하고자 하는 게 이 글을 쓰는 목적이니 소개하겠다. 나는 두 대의 맥북에 지킬을 설치했고, 서로 다른 두 유형의 permission error를 겪었다.
+
+## 사례 1. sudo로 해결
+
+```shell
+$ gem install bundler jekyll
+```
+
+터미널을 열고 위와 같이 입력했는데 퍼미션 에러가 떴다. 루비 폴더에 쓰기 권한이 없단다.  
+그래도 이 케이스는 해결이 간단하다. 무적의 `sudo`만 붙여주면 된다.
+
+```shell
+$ sudo gem install bundler jekyll
+```
+
+문제 해결!
+
+## 사례 2. rbenv로 해결
+
+다른 맥북에 설치할 때에는 아예 처음부터 sudo를 붙여서 실행했다. 그런데 아니...? 순조로이 설치가 진행되는듯 했는데 이상한 에러가 난다.
+
+```shell
+$ gem install bundler
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /Library/Ruby/Gems/2.x.x directory.
+```
+
+해당 에러 메시지로 검색을 해보니 주로 코코아팟(CocoaPods) 에러 해결책이 나오는데... 이런 류의 트러블슈팅을 몇 가지 시도해보았으나 되지 않았다.
+
+결론적으로 성공한 것은 `rbenv`를 통해 해결하는 것이었다. 이에 대해 간략히 설명하자면, 기본적으로 system ruby를 global ruby로 바라보고 있는데, rbenv를 통해서 별도 버전의 ruby를 global로 설정하여 위 문제를 회피할 수 있게 하는 것이다.
+
+도움을 받은 곳은 <a href="https://jojoldu.tistory.com/288" target="_blank">https://jojoldu.tistory.com/288</a> 이다.
+
+# Jekyll 테마
+
+GitHub에서 몇 가지 테마를 적용해주긴 하지만 각자의 원하는 바를 백 퍼센트 만족하지는 못할 것이다. 물론 정말 백 퍼센트 만족시킬 테마는 없을 것이고 그런 것은 손수 만들어야 할 것이다. 내 경우는 가장 내 취향에 가까운 것을 고르고 조금씩 커스터마이징하는 방법을 썼다.
+
+## 테마 고르기
+
+테마를 제공하는 사이트는 다음과 같다.
+
+- <a href="http://jekyllthemes.org/" target="_blank">http://jekyllthemes.org/</a>
+- <a href="https://jekyllthemes.io/free" target="_blank">https://jekyllthemes.io/free</a>
+- <a href="http://themes.jekyllrc.org/" target="_blank">http://themes.jekyllrc.org/</a>
+- <a href="https://github.com/topics/jekyll-theme" target="_blank">https://github.com/topics/jekyll-theme</a>
+
+이 중에 내가 고르고 적용한 테마는 `so-simple` 이라는 테마이며, 해당 테마의 git repository는 <a href="https://github.com/mmistakes/so-simple-theme" target="_blank">https://github.com/mmistakes/so-simple-theme</a> 이다.
+
+## 테마 적용하기
+
+so-simple 테마의 리파지토리를 보면 설치하고 세팅하는 방법에 대해 매우 상세하게 알려주고 있다. 설치의 경우 `Ruby Gem Method`와 `GitHub Pages Method` 두 가지 방법을 가이드하는데, 초심자인 내 입장에서 Ruby Gem은 어렵게 느껴져 GitHub Pages Method를 아래와 같이 따라해보았다.
+
+1. GitHub Pages를 만든 리파지토리의 Settings에서 임의의 GitHub Pages 테마를 선택
+2. 리파지토리 메인에 `_config.yml` 파일이 생성됨
+3. 빈 파일을 하나 생성해서 `Gemfile`로 이름을 붙여주고 가이드대로 내용을 채워준다.
+    ```shell
+    gem "github-pages", group: :jekyll_plugins
+    ```
+4. 2번의 `_config.yml` 파일에 역시 가이드대로 내용을 업데이트한다.
+    ```shell
+    remote_theme: "mmistakes/so-simple-theme@3.2.0"
+    ```
+
+이렇게 하니 깔끔하게 적용된 모습을 확인할 수 있었다.
+
+하지만 문제가 있었으니... 위 단계의 4번에서 보다시피 테마를 리모트로 적용하는 것이다보니 내 리파지토리에 있는 파일은 `Gemfile`, `_config.yml` 정도 밖에 없었다. 즉, 테마에 해당하는 파일들은 없다보니 내 입맛대로 커스텀하기 어렵겠다 생각이 들었다.
+
+결론적으로 so-simple 테마의 repository를 fork 했고, 그 중 지우라는 파일들을 지워서 현재의 블로그 테마를 유지하고 있다.
+{: .notice--accent}
+
+# 로컬 환경에서 테스트
+
+내 GitHub Pages 리파지토리를 로컬 환경에 clone하고, Gemfile에 아래와 같은 내용으로 기입했다. 이는 so-simple 테마에 해당하므로 다른 테마를 이용중이라면 해당 테마의 매뉴얼을 살펴보고 적절한 내용으로 바꾸어줘야 한다.
+
+```shell
+gem "jekyll-theme-so-simple"
+```
+
+터미널에서 `$ bundle install` 실행하여 (잘 안되면 당연히 앞에 sudo를 붙인다.) gem을 설치한다. 성공했다면 로컬에서 테스트할 준비가 완료된다.
+
+앞으로는 로컬 테스트가 필요할 때마다 터미널에서 repository가 있는 폴더로 이동해서 다음과 같이 구동하면 된다.
+
+```shell
+$ bundle exec jekyll serve
+Configuration file: /Users/olvikim/Documents/GitHub/olvimama.github.io/_config.yml
+            Source: /Users/olvikim/Documents/GitHub/olvimama.github.io
+       Destination: /Users/olvikim/Documents/GitHub/olvimama.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+       Jekyll Feed: Generating feed for posts
+                    done in 0.752 seconds.
+ Auto-regeneration: enabled for '/Users/olvikim/Documents/GitHub/olvimama.github.io'
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+```
+
+위 메시지를 자세히 보면 알겠지만, 성공적으로 구동한 후에는 아래와 같이 사용하면 된다.
+
+- `http://127.0.0.1:4000` 혹은 `http://localhost:4000` 으로 브라우저를 통해 들어간다.
+- 만약 내가 만든 마크다운 파일에 문제가 있다면 터미널을 통해 에러를 알려준다.
+- 또한 더 이상 작업할 내용이 없어 로컬 서버를 중지하려면 `ctrl-c`를 눌러 종료하면 된다.
+
+# 앞으로 다룰 내용
+
+본 글은 여기서 마무리하고, 다음에는 아래와 같은 내용을 두 세 편에 걸쳐 다룰 예정이다.
+
+- 테마를 구성하는 핵심 파일들에 대한 설명
+- 내가 커스터마이징한 부분에 대한 소개
+- 한글 폰트 적용
+- 글 임시저장하기
+- 404 Not Found 에러 페이지 커스텀하기
+- 구글 애널리틱스(Google Analytics) 적용
+- 구글 검색에 내 GitHub Pages 노출하기
