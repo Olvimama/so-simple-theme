@@ -7,6 +7,7 @@ tags:
   - GitHub Pages
   - blog
   - troubleshooting
+  - jekyll
 last_modified_at: 2021-04-07 09:36:00 +0900
 ---
 
@@ -42,7 +43,7 @@ GitHub Pages로 이 공간을 만들면서 많은 검색을 했다. 장단점이
 
 사실 저 내용만 따라해도 그럴듯한 GitHub Pages가 완성이 되며, `난 더 이상 굳이 진행할 필요 없어!` 라고 생각하면 이 아래 내용을 보지 않아도 좋다.
 
-# 지킬(Jekyll) 설치하기
+# Jekyll 설치하기
 
 사실 markdown을 이용해서 블로그 글을 작성하려면 `Jekyll`(이하 `지킬`)이라는 것을 PC에 설치해야 한다. 지킬은 markdown을 웹 페이지로 생성해주는 역할을 한다고 생각하면 된다.
 
