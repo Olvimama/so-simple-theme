@@ -6,6 +6,7 @@ categories:
 tags:
   - essay
   - fintech
+  - IT
   - UX
 ---
 
