@@ -1,5 +1,5 @@
 ---
-title: "[올비가 읽은 책] 뜻밖의 미술 - 미술관 밖으로 도망친 예술을 만나다"
+title: "[2020년의 독서] 뜻밖의 미술 - 미술관 밖으로 도망친 예술을 만나다"
 excerpt_separator: "<!--more-->"
 categories:
 - Books

@@ -1,5 +1,5 @@
 ---
-title: "[올비가 읽은 책] 2001 스페이스 오디세이"
+title: "[2020년의 독서] 2001 스페이스 오디세이"
 excerpt_separator: "<!--more-->"
 categories:
 - Books

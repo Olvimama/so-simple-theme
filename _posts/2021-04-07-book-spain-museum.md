@@ -1,5 +1,5 @@
 ---
-title: "[올비가 읽은 책] 스페인 미술관 산책"
+title: "[2020년의 독서] 스페인 미술관 산책"
 excerpt_separator: "<!--more-->"
 categories:
 - Books
