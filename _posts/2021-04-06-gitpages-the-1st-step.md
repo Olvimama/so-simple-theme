@@ -177,7 +177,7 @@ Configuration file: /Users/olvikim/Documents/GitHub/olvimama.github.io/_config.y
 - 만약 내가 만든 마크다운 파일에 문제가 있다면 터미널을 통해 에러 메시지가 출력된다.
 - 또한 더 이상 작업할 내용이 없어 로컬 서버를 중지하려면 `ctrl-c`를 눌러 종료하면 된다.
 
-# GitHub Pages 관련 다른 글 읽기
+# GitHub Pages 관련글
 
 - [[GitHub Pages] So Simple 테마를 통해 구조 살피기]({% link _posts/2021-04-18-gitpages-about-so-simple-theme.md %})
 - 그 외 추가 등록 예정 :)
