@@ -36,7 +36,7 @@ google_fonts:
     weights: "400,400i,700,700i"
   - name: "Lora"
     weights: "400,400i,700,700i"
-google_analytics: "UA-191811352-1" # Google Analytics id, e.g. "UA-NNNNNNNN-N"
+google_analytics: "UA-191811352-1" # Google Analytics id, e.g. "UA-NNNNNNNN-N" # customized by olvi
 disqus:
   shortname: # Disqus shortname, e.g. "my_disqus_shortname"
 twitter:
@@ -57,13 +57,13 @@ feed:
   path: atom.xml
 
 # Pagination - https://jekyllrb.com/docs/pagination/
-paginate: 6
+paginate: 6 # customized by olvi (default:10)
 paginate_path: /page:num/
 
 # Search
 search_full_content: true # can have performance implications for large sites
 
-# Taxonomy pages
+# Taxonomy pages # customized by olvi
 category_archive_path: "/category/#"
 tag_archive_path: "/tag/#"
 
@@ -84,9 +84,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-last-modified-at
+  - jekyll-last-modified-at # added by olvi
 
-# Front Matter Defaults
+# Front Matter Defaults # customized by olvi
 defaults:
   # Posts defaults
   - scope:
@@ -96,7 +96,7 @@ defaults:
       layout: post
       share: true
 
-# Site Author
+# Site Author # customized by olvi
 author:
   name: Olvi Kim
   picture: /images/me.jpeg
@@ -110,7 +110,7 @@ author:
       url: https://www.linkedin.com/in/olvi-kim
       icon: fab fa-linkedin
 
-# Footer Links
+# Footer Links # customized by olvi
 footer_links:
   - title: GitHub
     url: https://github.com/olvimama
