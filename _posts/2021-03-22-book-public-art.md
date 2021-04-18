@@ -1,5 +1,5 @@
 ---
-title: "[올비가 읽은 책] 뉴욕에서 만나는 퍼블릭 아트 - 모두의 미술"
+title: "[2020년의 독서] 뉴욕에서 만나는 퍼블릭 아트 - 모두의 미술"
 excerpt_separator: "<!--more-->"
 categories:
 - Books
