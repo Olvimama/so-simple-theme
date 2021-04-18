@@ -177,15 +177,7 @@ Configuration file: /Users/olvikim/Documents/GitHub/olvimama.github.io/_config.y
 - 만약 내가 만든 마크다운 파일에 문제가 있다면 터미널을 통해 에러 메시지가 출력된다.
 - 또한 더 이상 작업할 내용이 없어 로컬 서버를 중지하려면 `ctrl-c`를 눌러 종료하면 된다.
 
-# 앞으로 다룰 내용
+# GitHub Pages 관련 다른 글 읽기
 
-여기까지가 GitHub Pages의 입문이라고 생각하여 본 글은 여기서 마무리하려고 한다.  
-이후에는 다음의 내용을 몇 편에 걸쳐 다룰 예정이다. 한 편의 양에 따라 글 개수를 조정하려고 한다.
-
-- 테마를 구성하는 핵심 파일
-- 테마 커스터마이징
-- 한글 폰트 적용
-- 글 임시저장하기
-- 404 Not Found 에러 페이지 커스텀하기
-- 구글 애널리틱스(Google Analytics) 적용
-- 구글 검색에 내 GitHub Pages 노출하기
+- [[GitHub Pages] So Simple 테마를 통해 구조 살피기]({% link _posts/2021-04-18-gitpages-about-so-simple-theme.md %})
+- 그 외 추가 등록 예정 :)
