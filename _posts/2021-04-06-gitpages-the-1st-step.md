@@ -85,7 +85,7 @@ $ sudo gem install bundler jekyll
 다른 맥북에 설치할 때에는 아예 처음부터 sudo를 붙여서 실행했다. 그런데...? 순조로이 설치가 진행되는듯 했는데 이상한 에러가 난다.
 
 ```shell
-$ gem install bundler
+$ gem install bundler jekyll
 ERROR:  While executing gem ... (Gem::FilePermissionError)
     You don't have write permissions for the /Library/Ruby/Gems/2.x.x directory.
 ```
@@ -143,7 +143,7 @@ gem "jekyll-theme-so-simple"
 
 터미널에서 `$ bundle install` 실행하여 (잘 안되면 당연히 앞에 sudo를 붙인다.) gem을 설치한다. 성공했다면 로컬에서 테스트할 준비가 완료된다.
 
-이후에는 로컬 테스트가 필요할 때마다 터미널에서 저장소의 클론이 있는 디렉토리로 이동해서 `$ bundle exec jekyll serve` 명령어를 입력하면 된다. 아래는 내 로컬에서 실행했을 때의 모습이다.
+이후에는 로컬 테스트가 필요할 때마다 터미널에서 **저장소의 클론이 있는 디렉토리로 이동**해서 `$ bundle exec jekyll serve` 명령어를 입력하면 된다. 아래는 내 로컬에서 실행했을 때의 모습이다.
 
 ```shell
 $ bundle exec jekyll serve
