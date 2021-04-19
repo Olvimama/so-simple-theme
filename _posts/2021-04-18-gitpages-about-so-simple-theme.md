@@ -111,7 +111,7 @@ GNB(Global Navigation Bar) 설정 파일이라고 볼 수 있다.
 - <a href="https://github.com/mmistakes/so-simple-theme/blob/master/example/_data/navigation.yml" target="_blank">[링크] So Simple 데모 사이트의 navigation.yml</a>
 - <a href="https://github.com/olvimama/olvimama.github.io/blob/master/_data/navigation.yml" target="_blank">[링크] 본 사이트의 navigation.yml</a>
 
-*두 링크의 내용을 비교해보면 `title` 및 `url` 값이 다르다. 이에 대해서는 아래 [펌링크 경로 변경](#펌링크-경로-변경)에서 설명한다.*
+*두 링크의 내용을 비교해보면 `title` 및 `url` 값이 다르다. 이에 대해서는 아래 [404 error](#404-error)에서 설명한다.*
 {: .notice--accent}
 
 펌링크를 갖는 메뉴는 루트(root) 디렉토리에 해당 md 파일도 만들어줘야 한다. 본 사이트의 경우는 다음의 md 파일이 존재한다.
@@ -152,9 +152,9 @@ ko-KR:
 
 기본 설정을 적용하다가 겪은 문제와 해결법을 소개한다.
 
-## 메뉴 변경하다 만난 404 error
+## 404 error
 
-`_config.yml` 파일 중 `Taxonomy pages` 관련 내용이다. 우선 가이드 문서를 보자.
+GNB 메뉴를 변경하다 만난 에러로, `_config.yml` 파일 중 `Taxonomy pages` 관련 내용이다. 우선 가이드 문서를 보자.
 
 > By default, category and tags added to a post are not linked to taxonomy archive pages. To enable this behavior and link to pages with posts grouped by category or tag, add the following:
 
