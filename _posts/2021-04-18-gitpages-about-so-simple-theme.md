@@ -8,6 +8,7 @@ tags:
   - blog
   - jekyll
   - IT
+last_modified_at: 2021-04-19 09:52:00 +0900
 ---
 
 GitHub Pages 삽질기 두 번째 글이다. 이번 글에서는 `Jekyll`(이하 `지킬`) 기반 사이트의 구조와 기본적인 설정을 하는 방법을 기술하고자 한다.
@@ -26,7 +27,9 @@ So Simple 테마를 예시로 설명하기 전에 지킬 공식 사이트의 문
 - <a href="https://jekyllrb-ko.github.io/docs/step-by-step/01-setup/" target="_blank">[링크] 단계별 튜토리얼</a>
   - 설명만 읽기보다는 기초부터 따라하면서 배워보고 싶으면 이쪽을 추천한다.
   - 테마를 적용하지 않고 루비만 설치한 상태에서 시작해야 한다.
+- <a href="https://jekyllrb-ko.github.io/docs/configuration/" target="_blank">[링크] 환경설정</a>
 - <a href="https://jekyllrb-ko.github.io/docs/structure/" target="_blank">[링크] 디렉토리 구조</a>
+- <a href="https://jekyllrb-ko.github.io/docs/variables/" target="_blank">[링크] 변수</a>
 - <a href="https://jekyllrb-ko.github.io/docs/themes/" target="_blank">[링크] 지킬 테마에 대하여</a>
 
 # So Simple 테마
@@ -59,7 +62,7 @@ So Simple 테마는 아래와 같은 디렉토리 및 파일로 구성되어 있
 
 - 출처: <a href="https://github.com/mmistakes/so-simple-theme/blob/master/README.md#structure" target="_blank">[링크] So Simple 가이드 문서 중 Structure 항목</a>
 
-가이드 문서에 있는 내용에 따르면 `_data`, `_includes`, `_layouts` 및 `_sass`의 디렉토리와 파일들은 기본 위치(default location)에 위치한다고 한다. 지킬 공식 사이트에 있는 `디렉토리 구조` 내용과 비교해보면 실제로 그러하다는 걸 알 수 있다. 각 디렉토리에 대한 설명도 그곳에서 찾을 수 있으니 여기서는 내가 이 테마를 뜯어보다가 깨달은 내용으로 적어본다.
+가이드 문서에 있는 내용에 따르면 `_data`, `_includes`, `_layouts` 및 `_sass`의 디렉토리와 파일들은 기본 위치(default location)에 위치한다고 한다. 지킬 공식 사이트에 있는 <a href="https://jekyllrb-ko.github.io/docs/structure/" target="_blank">`디렉토리 구조`</a> 내용과 비교해보면 실제로 그러하다는 걸 알 수 있다. 각 디렉토리에 대한 설명도 그곳에서 찾을 수 있으니 여기서는 내가 이 테마를 뜯어보다가 깨달은 내용으로 적어본다.
 
 - `_layouts`: 말 그대로 큰 뼈대이다.
 - `_includes`: _layouts 디렉토리에 있는 파일들은 _includes 디렉토리에 있는 파일들로 구성되어 있다.
@@ -79,26 +82,36 @@ So Simple 가이드 문서에도 적혀있듯이, 최소 4개의 파일을 수�
 
 ### _config.yml
 
-전반적인 환경설정 정보를 담고 있는 파일이다. 그래서 가장 고칠 게 많다.
+전반적인 환경설정 정보를 담고 있는 파일이다. 그래서 가장 고칠 게 많다.  
+하지만 파일 내에 주석으로 간략한 설명이 있고, 가이드 문서도 잘 되어 있으니 참고하면 된다.  
+지킬 공식 사이트에 있는 <a href="https://jekyllrb-ko.github.io/docs/configuration/" target="_blank">`환경설정`</a> 문서도 도움이 될 것이다.
 
 - <a href="https://github.com/mmistakes/so-simple-theme/blob/master/README.md#configuring" target="_blank">[링크] So Simple 가이드 문서 중 Configuring 항목</a>
 
 설명으로 부족하거나 이해되지 않는다면 예시를 보는 게 도움이 된다.
 
-- <a href="https://github.com/mmistakes/so-simple-theme/blob/master/example/_config.yml" target="_blank">[링크] So Simple의 example configuration</a>
-- <a href="https://github.com/olvimama/olvimama.github.io/blob/master/_config.yml" target="_blank">[링크] 본 사이트의 configuration</a>
+- <a href="https://github.com/mmistakes/so-simple-theme/blob/master/example/_config.yml" target="_blank">[링크] So Simple 데모 사이트의 _config.yml</a>
+- <a href="https://github.com/olvimama/olvimama.github.io/blob/master/_config.yml" target="_blank">[링크] 본 사이트의 _config.yml</a>
   - `by olvi`로 검색하면 내가 수정한 내용을 알 수 있다.
-  - 변경한 내용 중 일부는 아래 [문제 해결](#문제-해결)에서 보다 상세히 설명한다. 단, Google Analytics 관련해서는 별도의 글에서 다룬다.
+  - 변경한 내용 중 일부는 아래 [문제 해결](#문제-해결)에서 보다 상세히 설명한다. 단, `google_fonts`와 `google_analytics` 관련해서는 별도의 글에서 다룬다.
+  - 댓글은 비허용으로 두고자 `disqus` 항목은 사용하지 않았다.
 
 ### _data/navigation.yml
 
 GNB(Global Navigation Bar) 설정 파일이라고 볼 수 있다.  
-내 경우는 So Simple 데모 사이트의 navigation 파일을 그대로 복사한 후 사용하지 않을 메뉴는 주석처리하고 `Home` 메뉴를 추가하는 방식으로 구성했다.
+내 경우는 다음의 절차에 따라 수정했다.
+
+1. So Simple 데모 사이트의 navigation 파일을 그대로 복사
+2. 사용하지 않을 메뉴는 주석처리
+3. 첫 화면으로 이동하는 `Home` 메뉴를 추가
+4. 포스트, 카테고리, 태그 메뉴의 메뉴명(`title`)과 경로(`url`) 수정
+
+아래 링크를 통해 원본과 본 사이트의 차이를 확인할 수 있다.
 
 - <a href="https://github.com/mmistakes/so-simple-theme/blob/master/example/_data/navigation.yml" target="_blank">[링크] So Simple 데모 사이트의 navigation.yml</a>
 - <a href="https://github.com/olvimama/olvimama.github.io/blob/master/_data/navigation.yml" target="_blank">[링크] 본 사이트의 navigation.yml</a>
 
-*두 링크의 내용을 비교해보면 `url` 값이 다르다. 이에 대해서는 아래 [펌링크 경로 변경](#펌링크-경로-변경)에서 설명한다.*
+*두 링크의 내용을 비교해보면 `title` 및 `url` 값이 다르다. 이에 대해서는 아래 [펌링크 경로 변경](#펌링크-경로-변경)에서 설명한다.*
 {: .notice--accent}
 
 펌링크를 갖는 메뉴는 루트(root) 디렉토리에 해당 md 파일도 만들어줘야 한다. 본 사이트의 경우는 다음의 md 파일이 존재한다.
@@ -116,10 +129,10 @@ GNB(Global Navigation Bar) 설정 파일이라고 볼 수 있다.
 
 - <a href="https://github.com/olvimama/olvimama.github.io/blob/master/_data/text.yml" target="_blank">[링크] 본 사이트의 text.yml</a>
 
-내 경우는 `_config.yml` 파일에 `locale` 값을 `ko-KR`로 했다. 하지만 `text.yml` 파일에 한국어 설정을 별도로 하지는 않았고, 아래와 같이 영어를 따르게 했다.
+내 경우는 `_config.yml` 파일의 `locale` 값을 `ko-KR`로 했다. 하지만 `text.yml` 파일에 한국어 설정을 별도로 하지는 않았고, 아래와 같이 영어를 따르게 했다.
 
 ```yml
-# text.yml
+# _data/text.yml
 ko-KR:
   <<: *DEFAULT_EN
 ```
@@ -139,9 +152,11 @@ ko-KR:
 
 기본 설정을 적용하다가 겪은 문제와 해결법을 소개한다.
 
-## 펌링크 경로 변경
+## 메뉴 변경하다 만난 404 error
 
 `_config.yml` 파일 중 `Taxonomy pages` 관련 내용이다. 우선 가이드 문서를 보자.
+
+> By default, category and tags added to a post are not linked to taxonomy archive pages. To enable this behavior and link to pages with posts grouped by category or tag, add the following:
 
 - <a href="https://github.com/mmistakes/so-simple-theme/blob/master/README.md#taxonomy-pages" target="_blank">[링크] So Simple 가이드 문서 중 Taxonomy Pages 항목</a>
 
@@ -201,19 +216,19 @@ permalink: /tag/
 요약하면 다음 항목의 값(경로)를 동일하게 해야 한다.
 
 1. 카테고리
-   - category_archive_path (_config.yml)
-   - title: Category의 url (navigation.yml)
-   - permalink (categories.md)
+   - **category_archive_path** (_config.yml)
+   - `title: {카테고리}`의 **url** (navigation.yml)
+   - **permalink** (categories.md)
 2. 태그
-   - tag_archive_path (_config.yml)
-   - title: Tag의 url (navigation.yml)
-   - permalink (tags.md)
+   - **tag_archive_path** (_config.yml)
+   - `title: {태그}`의 **url** (navigation.yml)
+   - **permalink** (tags.md)
 3. 포스트
-   - title: Post의 url (navigation.yml)
-   - permalink (posts.md)
+   - `title: {포스트}`의 **url** (navigation.yml)
+   - **permalink** (posts.md)
 4. 검색
-   - title: Search의 url (navigation.yml)
-   - permalink (search.md)
+   - `title: {검색}`의 **url** (navigation.yml)
+   - **permalink** (search.md)
 
 ## 페이지 나누기
 
@@ -221,10 +236,10 @@ permalink: /tag/
 
 우선 pagination이 뭔지 설명하자면 말 그대로 페이지 나누기로 이해하면 된다. 블로그에 많은 글이 등록될 경우 한 화면에 너무 많은 글을 보여주는 걸 피하기 위해 한 페이지 당 특정 개수의 글만 보여주는 식으로 정의하고, 특정 개수를 넘어가면 다른 페이지에서 보여주는 식이다.
 
-- <a href="https://jekyllrb-ko.github.io/docs/pagination/" target="_blank">[링크] 지킬 한국어 사이트 중 페이지 나누기 항목</a>
+- <a href="https://jekyllrb-ko.github.io/docs/pagination/" target="_blank">[링크] 지킬 공식 사이트의 `페이지 나누기` 문서</a>
 - <a href="https://github.com/mmistakes/so-simple-theme/blob/master/README.md#pagination" target="_blank">[링크] So Simple 가이드 문서 중 Pagination 항목</a>
 
-지킬 사이트에서 보면 **페이지 나누기는 오직 HTML 파일에서만 작동합니다** 라고 강조하고 있다. 그래서 pagination을 적용한 So Simple 데모 사이트나 본 사이트의 경우 `index.md`가 아닌 `index.html` 파일로 초기 화면을 구성한 것이다.
+지킬 공식 사이트의 문서에 따르면 **"페이지 나누기는 오직 HTML 파일에서만 작동합니다"** 라고 강조하고 있다. 그래서 pagination을 적용한 So Simple 데모 사이트나 본 사이트의 경우 `index.md`가 아닌 `index.html` 파일로 초기 화면을 구성한 것이다.
 
 가이드 문서에 보면 `Gemfile`, `_config.yml`, 그리고 `index.html` 등 세 개의 파일을 수정하라고 하는데 그대로 하면 되고, 만약을 대비하여 `_config.yml` 파일 중 `plugins` 항목에 `jekyll-paginate` 값이 있는지 또한 확인해봐야 한다.
 
@@ -251,6 +266,39 @@ layout: home
 paginate: true
 ```
 - <a href="https://github.com/olvimama/olvimama.github.io/blob/master/index.html" target="_blank">[링크] 본 사이트의 index.html</a>
+
+## 개별 글의 고유 url 정의
+
+`_config.yml` 파일을 수정하던 중, 가이드 문서에서 찾지 못한 내용을 발견했다.
+
+```yml
+# So Simple 테마 _config.yml에 정의된 기본값
+# Build settings
+permalink: /:categories/:title/
+```
+
+`permalink` 값의 정체는 바로 특정 글의 url 값 정의였다. So Simple 테마의 경우 `https://{_config.yml에 정의한 url}/{해당 글의 카테고리}/{해당 글의 파일명에 있는 제목}` 식으로 정의된 것이다.
+
+So Simple 데모 사이트를 통해 예를 들어보면 이해가 쉽다.
+
+- **`Post: Future Date`**
+  - 카테고리: `Post`
+  - 파일명: `2010-10-25-post-future-date.md`
+  - url: `https://mmistakes.github.io/so-simple-theme/post/post-future-date/`
+- **`MathJax Example`**
+  - 카테고리: 없음
+  - 파일명: `2015-08-10-mathjax-example.md`
+  - url: `https://mmistakes.github.io/so-simple-theme/mathjax-example/`
+
+이를 깨달은 후 나는 개별 글에 어떤 url을 갖게 할까 고민했다. 그대로 둘까 생각하기도 했지만 아무래도 개별 글이 특정 카테고리에 속한 느낌을 주는 게 내키지 않았고, 그 글 자체로 독립적인 url을 갖기를 원하여 아래와 같이 바꾸었다.
+
+```yml
+# 본 사이트의 _config.yml
+# Build settings
+permalink: /blog/:title
+```
+
+위와 같이 정의하면 `https://olvimama.github.io/blog/{해당 글의 파일명에 있는 제목}` 형식으로 경로가 정의된다.
 
 # GitHub Pages 관련글
 
