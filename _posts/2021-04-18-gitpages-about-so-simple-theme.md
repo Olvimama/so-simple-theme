@@ -114,7 +114,7 @@ GNB(Global Navigation Bar) 설정 파일이라고 볼 수 있다.
 *두 링크의 내용을 비교해보면 `title` 및 `url` 값이 다르다. 이에 대해서는 아래 [404 error](#404-error)에서 설명한다.*
 {: .notice--accent}
 
-펌링크를 갖는 메뉴는 루트(root) 디렉토리에 해당 md 파일도 만들어줘야 한다. 본 사이트의 경우는 다음의 md 파일이 존재한다.
+사이트 내부에 생성할 메뉴는 루트(root) 디렉토리에 해당 md 파일도 만들어줘야 한다. 본 사이트의 경우는 다음의 md 파일이 존재한다.
 
 - `categories.md` : GNB의 CATEGORY 메뉴에 해당
 - `posts.md` : GNB의 POST 메뉴에 해당
@@ -234,7 +234,7 @@ permalink: /tag/
 
 `_config.yml` 파일 중 `Pagination` 관련 내용이다.
 
-우선 pagination이 뭔지 설명하자면 말 그대로 페이지 나누기로 이해하면 된다. 블로그에 많은 글이 등록될 경우 한 화면에 너무 많은 글을 보여주는 걸 피하기 위해 한 페이지 당 특정 개수의 글만 보여주는 식으로 정의하고, 특정 개수를 넘어가면 다른 페이지에서 보여주는 식이다.
+우선 pagination이 뭔지 설명하자면 말 그대로 페이지 나누기로 이해하면 된다. 사이트에 많은 글이 있는 경우 한 화면에 너무 많은 글을 보여주는 걸 피하기 위해 한 페이지 당 특정 개수의 글만 보여주는 식으로 정의하고, 특정 개수를 넘어가면 다른 페이지에서 보여주는 식이다.
 
 - <a href="https://jekyllrb-ko.github.io/docs/pagination/" target="_blank">[링크] 지킬 공식 사이트의 `페이지 나누기` 문서</a>
 - <a href="https://github.com/mmistakes/so-simple-theme/blob/master/README.md#pagination" target="_blank">[링크] So Simple 가이드 문서 중 Pagination 항목</a>
